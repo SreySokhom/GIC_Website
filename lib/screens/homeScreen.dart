@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomeScreenState createState() => new _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('HomeScreen'),
       ),
-      child: Text(
-        "Hello word"
+      body: new Center(
+        child: new Text('Welcome to Home.!'),
       ),
     );
   }
