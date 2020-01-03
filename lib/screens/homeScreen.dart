@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -7,43 +8,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  int currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home", style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),),
-//            backgroundColor: Colors.blueAccent
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home", style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),),
-//              backgroundColor: Colors.blueAccent
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home", style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),),
-//              backgroundColor: Colors.blueAccent
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home", style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
-//              backgroundColor: Colors.blueAccent
-          )
-        ],
-        selectedItemColor: Color(0xff26304D),
-      ),
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
@@ -52,31 +22,71 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height/2*0.3,
-                width: MediaQuery.of(context).size.width*1,
+                height: MediaQuery.of(context).size.height * 0.2,
+                width: MediaQuery.of(context).size.width * 1,
                 decoration: BoxDecoration(
                   color: Color(0xff26304D),
                 ),
-                padding: EdgeInsets.only(top: 20),
-                child: Column(
-                  children: <Widget>[
-                    Image.asset("assets/images/gic_logo.png",
-                        height:60,width:70
-                    ),
-                    Text("Génie Informatique et Communication",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
-                    )
-                  ],
-                ),
+                padding: EdgeInsets.only(top: 5),
+                child: SafeArea(
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset("assets/images/gic_logo.png",
+                          height:70,width:70
+                      ),
+                      SizedBox(height: 4,),
+                      Text("Génie Informatique et Communication",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      )
+                    ],
+                  ),
+                )
               )
             ],
           ),
         )
-      )
+      ),
+      bottomNavigationBar: _bottomNavigationBar(),
+    );
+  }
+
+  Widget _bottomNavigationBar(){
+    return FancyBottomNavigation(
+      textColor: Color(0xff26304D),
+      circleColor: Color(0xff26304D),
+      inactiveIconColor: Color(0xff26304D),
+      initialSelection: currentPage,
+      tabs: [
+        TabData(
+          iconData: Icons.home,
+          title: "Home",
+          onclick: () => print("Home"),
+        ),
+        TabData(
+            iconData: Icons.calendar_today,
+            title: "Calendar",
+            onclick: () => print("Calendar"),
+        ),
+        TabData(
+            iconData: Icons.notifications,
+            title: "Notification",
+            onclick: () => print("Notificaftion"),
+        ),
+        TabData(
+            iconData: Icons.menu,
+            title: "Menu",
+            onclick: () => print("Menu"),
+        )
+      ],
+      onTabChangedListener: (position) {
+        setState(() {
+          currentPage = position;
+        });
+      },
     );
   }
 }
