@@ -4,6 +4,8 @@ import 'package:splashscreen/splashscreen.dart';
 import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/homeScreen.dart';
 
+import 'FAQsScreen.dart';
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => new _MyAppState();
@@ -16,7 +18,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
             seconds: 3,
-            navigateAfterSeconds: new HomeScreen(),
+            navigateAfterSeconds: new FAQScreen(),
             title: new Text('Génie Informatique et\nCommunication',
             textAlign: TextAlign.center,
             style: new TextStyle(

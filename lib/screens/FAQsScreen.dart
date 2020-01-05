@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:gic_website/screens/FAQsGeneralScreen.dart';
+import 'package:gic_website/screens/FAQsInternshipScreen.dart';
+import 'package:gic_website/screens/FAQsScholarshipScreen.dart';
 
-class FQAScreen extends StatefulWidget {
+class FAQScreen extends StatefulWidget {
   @override
-  _FQAScreenState createState() => _FQAScreenState();
+  _FAQScreenState createState() => _FAQScreenState();
 }
 
-class _FQAScreenState extends State<FQAScreen> {
-
-  int currentPage = 0;
+class _FAQScreenState extends State<FAQScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,6 @@ class _FQAScreenState extends State<FQAScreen> {
                   indicator: BoxDecoration(
                       color: Colors.white
                   ),
-
                   tabs: <Widget>[
                     Tab(text: "General",),
                     Tab(text: "Internship",),
@@ -46,6 +45,13 @@ class _FQAScreenState extends State<FQAScreen> {
                 ),
               ),
           ),
+        body: TabBarView(
+          children: <Widget>[
+             GeneralScreen(),
+            InternshipScreen(),
+            ScholarshipScreen()
+          ],
+        ),
         ),
 
       ),
