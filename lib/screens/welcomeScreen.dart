@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/homeScreen.dart';
 
 class MyApp extends StatefulWidget {
@@ -14,8 +15,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
-            seconds: 1,
-            navigateAfterSeconds: new HomeScreen(),
+            seconds: 3,
+//            navigateAfterSeconds: new HomeScreen(),
+            navigateAfterSeconds: new FQAScreen(),
             title: new Text('Génie Informatique et Communication',
             style: new TextStyle(
               fontWeight: FontWeight.bold,
