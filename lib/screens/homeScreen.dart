@@ -16,9 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.deepOrangeAccent
-          ),
           child: Column(
             children: <Widget>[
               Container(
@@ -39,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
+                          fontFamily: 'SegoePrint',
                           fontSize: 16,
                         ),
                       )
