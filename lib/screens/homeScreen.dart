@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:gic_website/screens/aboutGicScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -43,48 +44,48 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 )
+              ),
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => new AboutGICScreen())),
+                child: Text('Clicked to about gic'),
               )
             ],
           ),
         )
       ),
-      bottomNavigationBar: _bottomNavigationBar(),
-    );
-  }
-
-  Widget _bottomNavigationBar(){
-    return FancyBottomNavigation(
-      textColor: Color(0xff26304D),
-      circleColor: Color(0xff26304D),
-      inactiveIconColor: Color(0xff26304D),
-      initialSelection: currentPage,
-      tabs: [
-        TabData(
-          iconData: Icons.home,
-          title: "Home",
-          onclick: () => print("Home"),
-        ),
-        TabData(
+      bottomNavigationBar: FancyBottomNavigation(
+        textColor: Color(0xff26304D),
+        circleColor: Color(0xff26304D),
+        inactiveIconColor: Color(0xff26304D),
+        initialSelection: currentPage,
+        tabs: [
+          TabData(
+            iconData: Icons.home,
+            title: "Home",
+            onclick: () => print("Home"),
+          ),
+          TabData(
             iconData: Icons.calendar_today,
             title: "Calendar",
             onclick: () => print("Calendar"),
-        ),
-        TabData(
+          ),
+          TabData(
             iconData: Icons.notifications,
             title: "Notification",
             onclick: () => print("Notificaftion"),
-        ),
-        TabData(
+          ),
+          TabData(
             iconData: Icons.menu,
             title: "Menu",
             onclick: () => print("Menu"),
-        )
-      ],
-      onTabChangedListener: (position) {
-        setState(() {
-          currentPage = position;
-        });
-      },
+          )
+        ],
+        onTabChangedListener: (position) {
+          setState(() {
+            currentPage = position;
+          });
+        },
+      ),
     );
   }
 }

@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
             seconds: 3,
-            navigateAfterSeconds: new AboutGICScreen(),
+            navigateAfterSeconds: new HomeScreen(),
             title: new Text('Génie Informatique et\nCommunication',
             textAlign: TextAlign.center,
             style: new TextStyle(
