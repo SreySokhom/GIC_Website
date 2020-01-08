@@ -19,26 +19,42 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(right: 25, left: 25, top: 20),
+            padding: const EdgeInsets.only(right: 20, left: 20, top: 15),
             child: Column(
               children: <Widget>[
-                Image.asset(
-                  'assets/images/gic_logo.png',
-                  height: 130,
+                Container(
+                  child: Image.asset(
+                    'assets/images/gic_logo.png',
+                    height: 130,
+                  ),
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+//                        color: Color(0xff26304D),
+                        color: Colors.grey,
+                        blurRadius: 10,
+                        spreadRadius: 1,
+                        offset: Offset(5, 5))
+                  ]),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
-                Text(
-                  "Founded in 1998, the Department of Information and Communication Engineering, also known as Département de"
-                  "Génie d’Informatique et Communication (GIC) in French, has formed more than one thousand engineers and technicians in"
-                  "computer science who are now participating actively in the development of both public and private sectors.",
-                  softWrap: true,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(height: 1.3),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: Text(
+                      "Founded in 1998, the Department of Information and Communication Engineering, also known as Département de"
+                      "Génie d’Informatique et Communication (GIC) in French, has formed more than one thousand engineers and technicians in"
+                      "computer science who are now participating actively in the development of both public and private sectors.",
+                      softWrap: true,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(height: 1.3, color: Color(0XFF707070)),
+                    ),
+                  ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +67,7 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 1,
-                     child: Column(
+                      child: Column(
                         children: <Widget>[
                           Row(
                             children: <Widget>[
@@ -65,7 +81,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text("(+855) 23 5555 942")
+                                      Text(
+                                        "(+855) 23 5555 942",
+                                        style:
+                                            TextStyle(color: Color(0XFF707070)),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -86,7 +106,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text("(+855) 23 5555 942")
+                                      Text(
+                                        "(+855) 23 5555 942",
+                                        style:
+                                            TextStyle(color: Color(0XFF707070)),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -107,7 +131,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text("itc.gicinfo@gmail.com")
+                                      Text(
+                                        "itc.gicinfo@gmail.com",
+                                        style:
+                                            TextStyle(color: Color(0XFF707070)),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -128,7 +156,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text("gic.itc.edu.kh")
+                                      Text(
+                                        "gic.itc.edu.kh",
+                                        style:
+                                            TextStyle(color: Color(0XFF707070)),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -140,18 +172,24 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                           Row(
                             children: <Widget>[
                               Expanded(
-                                child: Text("Address:"),
+                                child: Container(
+                                  alignment: Alignment.topLeft,
+                                  child: Text("Address:"),
+                                ),
                                 flex: 1,
                               ),
                               Expanded(
                                 child: GestureDetector(
                                   onTap: _launchMap,
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text("Office 307F, Building F, PO Box 86, Russian Conf. Blvd. Phnom Penh, Cambodia.",
-                                      softWrap: true,
-                                      textAlign: TextAlign.right,)
+                                      Text(
+                                        "Office 307F, Building F, PO Box 86, Russian Conf. Blvd. Phnom Penh, Cambodia.",
+                                        softWrap: true,
+                                        style:
+                                            TextStyle(color: Color(0XFF707070)),
+                                        textAlign: TextAlign.right,
+                                      )
                                     ],
                                   ),
                                 ),
@@ -174,11 +212,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
             color: Color(0xff26304D),
             child: Center(
               child: Text("Copyright © 2020 by GIC Department",
-                style: TextStyle(
+                  style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,)
-              ),
+                    color: Colors.white,
+                  )),
             ),
           )
         ],
@@ -214,7 +252,7 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
   }
 
   _launchWeb() async {
-    const website = 'http:gic.itc.edi.kh';
+    const website = 'http://gic.itc.edu.kh';
     if (await canLaunch(website)) {
       await launch(website);
     } else {
@@ -223,12 +261,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
   }
 
   _launchMap() async {
-    const website = 'http:gic.itc.edi.kh';
-    if (await canLaunch(website)) {
-      await launch(website);
+    const googleUrl = 'https://www.google.com/maps/place/Department+of+Computer+Science/@11.5706757,104.8992876,17z/data=!4m8!1m2!2m1!1sinstitute+of+technology!3m4!1s0x0:0x736932a196b9dd19!8m2!3d11.5705899!4d104.8993063';
+    if (await canLaunch(googleUrl)) {
+      await launch(googleUrl);
     } else {
-      throw 'Could not launch $website';
+      throw 'Could not open the map.';
     }
   }
-
 }
