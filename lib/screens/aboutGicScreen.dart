@@ -17,16 +17,17 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
         title: Text("About GIC"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20, top: 20),
+            padding: const EdgeInsets.only(right: 25, left: 25, top: 20),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Image.asset(
                   'assets/images/gic_logo.png',
                   height: 130,
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Text(
                   "Founded in 1998, the Department of Information and Communication Engineering, also known as Département de"
@@ -34,54 +35,134 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                   "computer science who are now participating actively in the development of both public and private sectors.",
                   softWrap: true,
                   textAlign: TextAlign.center,
+                  style: TextStyle(height: 1.3),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text("For more information",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18)),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      GestureDetector(
-                        onTap: _launchTel,
-                        child: _widgetInformation("Tel", "(+855) 23 5555 942"),
-                      ),
-                      GestureDetector(
-                        onTap: _launchFax,
-                        child: _widgetInformation("Fax:", "(+855) 23 880 369"),
-                      ),
-                      GestureDetector(
-                        onTap: _launchEmail,
-                        child: _widgetInformation("Email:", "itc.gicinfo@gmail.com"),
-                      ),
-                      GestureDetector(
-                        onTap: _launchWeb,
-                        child: _widgetInformation("Website:", "gic.itc.edu.kh"),
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                SizedBox(
+                  height: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("For more information",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18)),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 1,
+                     child: Column(
                         children: <Widget>[
-                          Column(
-                            children: <Widget>[Text("Address")],
-                          ),
-                          Spacer(),
-                          Column(
+                          Row(
                             children: <Widget>[
-                              Text(
-                                "Office 307F, Building F, PO Box 86,\nRussian Conf. Blvd. Phnom Penh, Cambodia.",
-                                textAlign: TextAlign.right,
+                              Expanded(
+                                child: Text("Tel:"),
+                                flex: 1,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: _launchTel,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      Text("(+855) 23 5555 942")
+                                    ],
+                                  ),
+                                ),
+                                flex: 2,
+                              )
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text("Fax:"),
+                                flex: 1,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: _launchFax,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      Text("(+855) 23 5555 942")
+                                    ],
+                                  ),
+                                ),
+                                flex: 2,
+                              )
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text("Email:"),
+                                flex: 1,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: _launchEmail,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      Text("itc.gicinfo@gmail.com")
+                                    ],
+                                  ),
+                                ),
+                                flex: 2,
+                              )
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text("Website:"),
+                                flex: 1,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: _launchWeb,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      Text("gic.itc.edu.kh")
+                                    ],
+                                  ),
+                                ),
+                                flex: 2,
+                              )
+                            ],
+                          ),
+                          Divider(),
+                          Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text("Address:"),
+                                flex: 1,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: _launchMap,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      Text("Office 307F, Building F, PO Box 86, Russian Conf. Blvd. Phnom Penh, Cambodia.",
+                                      softWrap: true,
+                                      textAlign: TextAlign.right,)
+                                    ],
+                                  ),
+                                ),
+                                flex: 2,
                               )
                             ],
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -102,22 +183,6 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
           )
         ],
       ),
-    );
-  }
-
-  Widget _widgetInformation(String title, String text) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        Column(
-          children: <Widget>[Text(title)],
-        ),
-        Spacer(),
-        Column(
-          children: <Widget>[Text(text), Divider()],
-        ),
-      ],
     );
   }
 
@@ -149,6 +214,15 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
   }
 
   _launchWeb() async {
+    const website = 'http:gic.itc.edi.kh';
+    if (await canLaunch(website)) {
+      await launch(website);
+    } else {
+      throw 'Could not launch $website';
+    }
+  }
+
+  _launchMap() async {
     const website = 'http:gic.itc.edi.kh';
     if (await canLaunch(website)) {
       await launch(website);
