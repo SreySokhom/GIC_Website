@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-
+import 'package:gic_website/screens/carousel_slider.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.deepOrangeAccent
+            // color: Colors.deepOrangeAccent
           ),
           child: Column(
             children: <Widget>[
@@ -42,10 +42,90 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 16,
                         ),
                       )
+                   
                     ],
                   ),
                 )
-              )
+              ),
+                  CarouselWithIndicator(),
+
+                  Align(
+                    
+                    alignment: Alignment.centerLeft,
+                    child: Text("Feature",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 25,
+                          
+                        ),
+                      ),  
+                  ),
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                 children:[
+                   
+                     Container(
+                     height:120,
+                     width: 120,
+                     decoration:BoxDecoration(
+                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       color: Color(0xFFFFFFFF),
+                       boxShadow: [
+                           BoxShadow(
+                           color: Color(0x3fC1C1C1),
+                           blurRadius: 6.0, // soften the shadow
+                           spreadRadius: 2.0, //extend the shadow
+                           offset: Offset(
+                             0.0, // Move to right 10  horizontally
+                             3.0, // Move to bottom 10 Vertically
+                           ),
+                         )
+                                  ],
+                     )
+                   ),   
+                   
+                     Container(
+                     height:120,
+                     width: 120,
+                     decoration:BoxDecoration(
+                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       color: Color(0xFFFFFFFF),
+                       boxShadow: [
+                           BoxShadow(
+                           color: Color(0x3fC1C1C1),
+                           blurRadius: 6.0, // soften the shadow
+                           spreadRadius: 2.0, //extend the shadow
+                           offset: Offset(
+                             0.0, // Move to right 10  horizontally
+                             3.0, // Move to bottom 10 Vertically
+                           ),
+                         )
+                                  ],
+                     )
+                   ),   
+                    
+                     Container(
+                     height:120,
+                     width: 120,
+                     decoration:BoxDecoration(
+                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       color: Color(0xFFFFFFFF),
+                       boxShadow: [
+                           BoxShadow(
+                           color: Color(0x3fC1C1C1),
+                           blurRadius: 6.0, // soften the shadow
+                           spreadRadius: 2.0, //extend the shadow
+                           offset: Offset(
+                             0.0, // Move to right 10  horizontally
+                             3.0, // Move to bottom 10 Vertically
+                           ),
+                         )
+                                  ],
+                     )
+                   ),                
+                 ],
+               )
             ],
           ),
         )
@@ -53,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: _bottomNavigationBar(),
     );
   }
+  
 
   Widget _bottomNavigationBar(){
     return FancyBottomNavigation(
@@ -89,4 +170,5 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
   }
+
 }
