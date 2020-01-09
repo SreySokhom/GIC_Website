@@ -107,7 +107,7 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
                                       Text(
-                                        "(+855) 23 5555 942",
+                                        "(+855) 23 880 369",
                                         style:
                                             TextStyle(color: Color(0XFF707070)),
                                       )
@@ -211,7 +211,7 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
             width: MediaQuery.of(context).size.width,
             color: Color(0xff26304D),
             child: Center(
-              child: Text("Copyright © 2020 by GIC Department",
+              child: Text("Copyright © 2019 by GIC Department",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
@@ -234,11 +234,11 @@ class _AboutGICScreenState extends State<AboutGICScreen> {
   }
 
   _launchFax() async {
-    const tel = 'tel:023 5555 942';
-    if (await canLaunch(tel)) {
-      await launch(tel);
+    const fax = 'tel:023 880 369';
+    if (await canLaunch(fax)) {
+      await launch(fax);
     } else {
-      throw 'Could not launch $tel';
+      throw 'Could not launch $fax';
     }
   }
 

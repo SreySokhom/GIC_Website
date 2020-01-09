@@ -1,58 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-import 'package:gic_website/screens/aboutGicScreen.dart';
+import 'package:gic_website/screens/Home.dart';
+import 'package:gic_website/screens/Calender.dart';
+import 'package:gic_website/screens/Notification.dart';
+import 'package:gic_website/screens/More.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
-
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   int currentPage = 0;
+
+  static List<Widget> _widgetOptions = <Widget>[
+    Home(),
+    Calender(),
+    Notifications(),
+    More(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                height: MediaQuery.of(context).size.height * 0.2,
-                width: MediaQuery.of(context).size.width * 1,
-                decoration: BoxDecoration(
-                  color: Color(0xff26304D),
-                ),
-                padding: EdgeInsets.only(top: 5),
-                child: SafeArea(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/images/gic_logo.png",
-                          height:70,width:70
-                      ),
-                      SizedBox(height: 4,),
-                      Text("Génie Informatique et Communication",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontFamily: 'SegoePrint',
-                          fontSize: 16,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ),
-              MaterialButton(
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => new AboutGICScreen())),
-                child: Text('Clicked to about gic'),
-              )
-            ],
-          ),
-        )
-      ),
+      body: _widgetOptions.elementAt(currentPage),
       bottomNavigationBar: FancyBottomNavigation(
         textColor: Color(0xff26304D),
         circleColor: Color(0xff26304D),
@@ -77,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           TabData(
             iconData: Icons.menu,
             title: "Menu",
-            onclick: () => print("Menu"),
+            onclick: () => print("More"),
           )
         ],
         onTabChangedListener: (position) {
@@ -89,3 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+//MaterialButton(
+//onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => new AboutGICScreen())),
+//child: Text('Clicked to about gic'),
+//)

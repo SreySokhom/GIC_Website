@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gic_website/screens/aboutGicScreen.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:gic_website/screens/homeScreen.dart';
 
