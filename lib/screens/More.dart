@@ -32,7 +32,6 @@ class _MoreState extends State<More> {
                       color: Color(0xffA61D37)),
                 ),
               ),
-              Spacer(),
               Container(
                 width: MediaQuery.of(context).size.width * 1,
                 height: 70,
@@ -42,11 +41,10 @@ class _MoreState extends State<More> {
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       const ListTile(
-                        leading: Icon(Icons.arrow_back_ios, size: 20),
-                        title: Text('Languages'),
+                        title: Text('Languages', style: TextStyle(color: Color(0xff707070), fontWeight: FontWeight.bold, fontSize: 16),),
+                        trailing: Icon(Icons.arrow_forward_ios, size: 20),
                       ),
                     ],
                   ),
