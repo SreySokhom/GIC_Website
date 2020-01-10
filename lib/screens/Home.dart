@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: <Widget>[
                           Image.asset("assets/images/gic_logo.png",
-                              height:70,width:70
+                              height:70,width:80
                           ),
                           SizedBox(height: 4,),
                           Text("Génie Informatique et Communication",
