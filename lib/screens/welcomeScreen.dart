@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/homeScreen.dart';
+import 'package:gic_website/screens/test.dart';
+import 'package:gic_website/screens/PartnersScreen.dart';
+
 
 import 'FAQsScreen.dart';
 
@@ -18,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
             seconds: 3,
-            navigateAfterSeconds: new FAQScreen(),
+            navigateAfterSeconds: new HomeScreen(),
             title: new Text('Génie Informatique et\nCommunication',
             textAlign: TextAlign.center,
             style: new TextStyle(
