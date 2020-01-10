@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_slider/simple_slider.dart';
 
-// void main() => runApp(new MyApp());
 
 class SimpleSlider extends StatefulWidget {
   @override

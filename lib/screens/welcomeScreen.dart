@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:gic_website/screens/homeScreen.dart';
-import 'package:gic_website/screens/carousel_slider.dart';
+
 
 class MyApp extends StatefulWidget {
   @override

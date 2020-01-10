@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-
-import 'package:gic_website/screens/simple_slider.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -9,7 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
+ 
   int currentPage = 0;
 
   @override
@@ -47,10 +46,52 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 )
-              ),
-                  SimpleSlider(),
-                  // CarouselWithIndicator(),
-
+              ),   
+              Container(  
+                decoration: BoxDecoration(
+                   borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
+                child:
+         Container(
+           height: 220.0,
+          width: 400.0,
+          margin: EdgeInsets.symmetric(vertical:5.0),
+           decoration: BoxDecoration(
+             boxShadow: 
+             [
+                           BoxShadow(
+                           color: Color(0x3fC1C1C1),
+                           blurRadius: 2.0, // soften the shadow
+                           spreadRadius: 5.0, //extend the shadow
+                           offset: Offset(
+                             0.0, // Move to right 10  horizontally
+                             3.0, // Move to bottom 10 Vertically
+                           ),
+                         )
+                                  ],
+           ),
+           child:ClipRRect(
+             borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          child: Carousel(
+            
+            boxFit: BoxFit.cover,
+            autoplay: true,
+            animationCurve: Curves.fastOutSlowIn,
+            animationDuration: Duration(milliseconds: 1000),
+            dotSize: 6.0,
+            dotIncreasedColor: Color(0xff26304D),
+            dotBgColor: Colors.transparent,
+            dotPosition: DotPosition.bottomCenter,
+            dotVerticalPadding: 10.0,
+            showIndicator: true,
+            indicatorBgPadding: 7.0,
+            images: [
+              NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+              NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+              ExactAssetImage('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80'),
+            ],
+          ),
+        ))),
                   Align(
                     
                     alignment: Alignment.centerLeft,
@@ -68,10 +109,10 @@ class _HomeScreenState extends State<HomeScreen> {
                  children:[
                    
                      Container(
-                     height:120,
-                     width: 120,
+                     height:130,
+                     width: 130,
                      decoration:BoxDecoration(
-                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                        color: Color(0xFFFFFFFF),
                        boxShadow: [
                            BoxShadow(
@@ -88,10 +129,10 @@ class _HomeScreenState extends State<HomeScreen> {
                    ),   
                    
                      Container(
-                     height:120,
-                     width: 120,
+                     height:130,
+                     width: 130,
                      decoration:BoxDecoration(
-                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                        color: Color(0xFFFFFFFF),
                        boxShadow: [
                            BoxShadow(
@@ -108,10 +149,10 @@ class _HomeScreenState extends State<HomeScreen> {
                    ),   
                     
                      Container(
-                     height:120,
-                     width: 120,
+                     height:130,
+                     width: 130,
                      decoration:BoxDecoration(
-                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                        color: Color(0xFFFFFFFF),
                        boxShadow: [
                            BoxShadow(
@@ -136,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
   
-
+  
   Widget _bottomNavigationBar(){
     return FancyBottomNavigation(
       textColor: Color(0xff26304D),
