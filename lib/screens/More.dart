@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gic_website/screens/LanguageScreen.dart';
 
 class More extends StatefulWidget {
   @override

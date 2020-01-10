@@ -5,12 +5,12 @@ import 'package:gic_website/screens/Calender.dart';
 import 'package:gic_website/screens/Notification.dart';
 import 'package:gic_website/screens/More.dart';
 
-class HomeScreen extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int currentPage = 0;
 
   static List<Widget> _widgetOptions = <Widget>[
