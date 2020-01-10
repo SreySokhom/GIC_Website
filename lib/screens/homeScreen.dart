@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-import 'package:gic_website/screens/carousel_slider.dart';
+
+import 'package:gic_website/screens/simple_slider.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -47,7 +48,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 )
               ),
-                  CarouselWithIndicator(),
+                  SimpleSlider(),
+                  // CarouselWithIndicator(),
 
                   Align(
                     
