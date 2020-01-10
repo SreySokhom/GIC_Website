@@ -22,8 +22,26 @@ class _CompaniesScreenState extends State<CompaniesScreen> {
               color: Colors.grey[200],
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
-            padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('He\'d have you all unravel at the')),
+            padding: const EdgeInsets.all(5),
+            child: Stack(
+              children: <Widget>[
+                Container(
+
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.height * 1,
+                  child: Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage("assets/images/gic_logo.png",),
+                  ),
+                ),
+                Center(
+                    child: Text('Sound of screams but the',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold
+                      ))
+                ),
+              ],
+            ),
 
           ),
           Container(
@@ -31,9 +49,22 @@ class _CompaniesScreenState extends State<CompaniesScreen> {
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.all(Radius.circular(25)),
               ),
-            padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('Heed not the rabble')),
-
+            padding: const EdgeInsets.all(5),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.height * 1,
+                  child: Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage("assets/images/gic_logo.png",),
+                  ),
+                ),
+                Center(
+                    child: Text('Sound of screams but the')
+                ),
+              ],
+            ),
           ),
           Container(
             decoration: BoxDecoration(
