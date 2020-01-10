@@ -15,32 +15,9 @@ final List child = map<Widget>(
     return Container(
       margin: EdgeInsets.all(5.0),
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
         child: Stack(children: <Widget>[
           Image.asset(i, fit: BoxFit.cover, width: 1000.0),
-          Positioned(
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(200, 0, 0, 0),
-                    Color.fromARGB(0, 0, 0, 0)
-                  ],
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                ),
-              ),
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-              child: Text(
-                'No. $index image',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
         ]),
       ),
     );
@@ -62,7 +39,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   int _current = 0;
+
+  static BoxDecoration boxDecoration = BoxDecoration(
+    boxShadow: <BoxShadow>[
+      BoxShadow(
+        offset: Offset(0, 4),
+        color: Colors.black12,
+        blurRadius: 20,
+      )
+    ],
+    borderRadius: BorderRadius.circular(10),
+    color: Colors.white,
+  );
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -146,113 +137,269 @@ class _HomeState extends State<Home> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 15, left: 15),
-              child: Column(
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('News/Events',
-                                    style: TextStyle(color: Color(0xff26304D),)),
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 1,
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            decoration: boxDecoration,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "News/Events",
+                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 5),
+                                          alignment: Alignment.topLeft,
+                                          child: Container(
+                                            width: 50,
+                                            height: 1,
+                                            color: Color(0xffFFCE71),
+                                          ),
+                                        ),
+                                        Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            alignment: Alignment.topLeft,
+                                            width: 100,
+                                            child: Image.asset(
+                                              "assets/images/news.png",
+                                              width: 50,
+                                              height: 50,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D))),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            decoration: boxDecoration,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Scholarships",
+                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 5),
+                                          alignment: Alignment.topLeft,
+                                          child: Container(
+                                            width: 50,
+                                            height: 1,
+                                            color: Color(0xffE14A4A),
+                                          ),
+                                        ),
+                                        Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            alignment: Alignment.topLeft,
+                                            width: 100,
+                                            child: Image.asset(
+                                              "assets/images/graduation.png",
+                                              width: 50,
+                                              height: 50,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D))),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            decoration: boxDecoration,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Partners",
+                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 5),
+                                          alignment: Alignment.topLeft,
+                                          child: Container(
+                                            width: 50,
+                                            height: 1,
+                                            color: Color(0xff5C9CEE),
+                                          ),
+                                        ),
+                                        Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            alignment: Alignment.topLeft,
+                                            width: 100,
+                                            child: Image.asset(
+                                              "assets/images/partners.png",
+                                              width: 50,
+                                              height: 50,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D),)),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            decoration: boxDecoration,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "FAQs",
+                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 5),
+                                          alignment: Alignment.topLeft,
+                                          child: Container(
+                                            width: 50,
+                                            height: 1,
+                                            color: Color(0xffAE85CC),
+                                          ),
+                                        ),
+                                        Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            alignment: Alignment.topLeft,
+                                            width: 100,
+                                            child: Image.asset(
+                                              "assets/images/faq.png",
+                                              width: 50,
+                                              height: 50,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D))),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            decoration: boxDecoration,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "About GIC",
+                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 5),
+                                          alignment: Alignment.topLeft,
+                                          child: Container(
+                                            width: 50,
+                                            height: 1,
+                                            color: Color(0xffA65D4E),
+                                          ),
+                                        ),
+                                        Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            alignment: Alignment.topLeft,
+                                            width: 100,
+                                            child: Image.asset(
+                                              "assets/images/data.png",
+                                              width: 50,
+                                              height: 50,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            child: SizedBox(),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
