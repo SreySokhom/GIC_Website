@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-import 'package:carousel_pro/carousel_pro.dart';
+// import 'package:carousel_pro/carousel_pro.dart';
 import 'package:gic_website/screens/carousel_slider.dart';
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,9 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            // color: Colors.deepOrangeAccent
-          ),
           child: Column(
             children: <Widget>[
               Container(
@@ -40,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
+                          fontFamily: 'SegoePrint',
                           fontSize: 16,
                         ),
                       )
@@ -49,55 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               ),   
               CarouselWithIndicator(),
-        //       Container(  
-        //         decoration: BoxDecoration(
-        //            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        //         ),
-        //         child:
-        //  Container(
-        //    height: 220.0,
-        //   width: 400.0,
-        //   margin: EdgeInsets.symmetric(vertical:5.0),
-        //    decoration: BoxDecoration(
-        //      boxShadow: 
-        //      [
-        //                    BoxShadow(
-        //                    color: Color(0x3fC1C1C1),
-        //                    blurRadius: 2.0, // soften the shadow
-        //                    spreadRadius: 5.0, //extend the shadow
-        //                    offset: Offset(
-        //                      0.0, // Move to right 10  horizontally
-        //                      3.0, // Move to bottom 10 Vertically
-        //                    ),
-        //                  )
-        //                           ],
-        //    ),
-        //    child:ClipRRect(
-        //      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        //   child: Carousel(
-            
-        //     boxFit: BoxFit.cover,
-        //     autoplay: true,
-        //     animationCurve: Curves.fastOutSlowIn,
-        //     animationDuration: Duration(milliseconds: 1000),
-        //     dotSize: 6.0,
-        //     dotIncreasedColor: Color(0xff26304D),
-        //     dotBgColor: Colors.transparent,
-        //     dotPosition: DotPosition.bottomCenter,
-        //     dotVerticalPadding: 10.0,
-        //     showIndicator: true,
-        //     indicatorBgPadding: 7.0,
-        //     images: [
-        //       NetworkImage('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80'),
-        //       NetworkImage('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80'),
-        //       NetworkImage('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80'),
-        //       NetworkImage('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80'),
-        //       // ExactAssetImage('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80'),
-        //     ],
-        //   ),
-        // )
-        // )
-        // ),
+       
                   Align(
                     
                     alignment: Alignment.centerLeft,

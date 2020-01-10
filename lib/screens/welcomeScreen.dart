@@ -16,14 +16,17 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
-            seconds: 1,
+            seconds: 3,
             navigateAfterSeconds: new HomeScreen(),
-            title: new Text('Génie Informatique et Communication',
+            title: new Text('Génie Informatique et\nCommunication',
+            textAlign: TextAlign.center,
             style: new TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
+              fontFamily: 'SegoePrint',
               color: Colors.white
             ),),
+
             image: Image.asset('assets/images/gic_logo.png'),
             backgroundColor: Color(0xff26304D),
             photoSize: 100.0,
