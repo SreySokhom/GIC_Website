@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:gic_website/screens/FAQsScreen.dart';
+import 'package:gic_website/screens/PartnersScreen.dart';
+import 'aboutGicScreen.dart';
+
 
 final List<String> imgList = [
   'assets/images/teacher.jpg',
@@ -182,29 +186,34 @@ class _HomeState extends State<Home> {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               ListTile(
-                                title: Text('Heart Shaker',
+                                title: Text('Scholarship',
                                     style: TextStyle(color: Color(0xff26304D))),
                               ),
                             ],
                           ),
                         ),
                       ),
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D))),
-                              ),
-                            ],
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerScreen()));
+                        },
+                        child: Container(
+                          width: 125,
+                          height: 125,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text('Partners',
+                                      style: TextStyle(color: Color(0xff26304D))),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -212,41 +221,51 @@ class _HomeState extends State<Home> {
                   ),
                   Row(
                     children: <Widget>[
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D),)),
-                              ),
-                            ],
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
+                        },
+                        child: Container(
+                          width: 125,
+                          height: 125,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text('FAQs',
+                                      style: TextStyle(color: Color(0xff26304D),)),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        width: 125,
-                        height: 125,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                title: Text('Heart Shaker',
-                                    style: TextStyle(color: Color(0xff26304D))),
-                              ),
-                            ],
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => AboutGICScreen()));
+                        },
+                        child: Container(
+                          width: 125,
+                          height: 125,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text('About GIC',
+                                      style: TextStyle(color: Color(0xff26304D))),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

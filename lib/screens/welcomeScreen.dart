@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:gic_website/screens/FAQsScreen.dart';
-import 'package:gic_website/screens/homeScreen.dart';
+import 'package:gic_website/screens/Home.dart';
 import 'package:gic_website/screens/test.dart';
 import 'package:gic_website/screens/PartnersScreen.dart';
 
@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
           home: SplashScreen(
             seconds: 3,
-            navigateAfterSeconds: new HomeScreen(),
+            navigateAfterSeconds: new Home(),
             title: new Text('Génie Informatique et\nCommunication',
             textAlign: TextAlign.center,
             style: new TextStyle(
