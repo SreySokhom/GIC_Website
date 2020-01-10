@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gic_website/screens/FAQsGeneralScreen.dart';
+import 'package:gic_website/screens/LanguageScreen.dart';
 
 class More extends StatefulWidget {
   @override
@@ -32,23 +34,28 @@ class _MoreState extends State<More> {
                       color: Color(0xffA61D37)),
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 1,
-                height: 70,
-                alignment: Alignment.center,
-                child: Card(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      const ListTile(
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LanguageScreen()));
+                },
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: 70,
+                  alignment: Alignment.center,
+                  child: Card(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        const ListTile(
 
-                        title: Text('Languages', style: TextStyle(color: Color(0xff707070), fontWeight: FontWeight.bold, fontSize: 16),),
-                        trailing: Icon(Icons.arrow_forward_ios, size: 20),
-                      ),
-                    ],
+                          title: Text('Languages', style: TextStyle(color: Color(0xff707070), fontWeight: FontWeight.bold, fontSize: 16),),
+                          trailing: Icon(Icons.arrow_forward_ios, size: 20),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

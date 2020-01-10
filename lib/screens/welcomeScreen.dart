@@ -1,13 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/Home.dart';
-import 'package:gic_website/screens/test.dart';
-import 'package:gic_website/screens/PartnersScreen.dart';
-
-
-import 'FAQsScreen.dart';
 
 class MyApp extends StatefulWidget {
   @override

@@ -26,53 +26,26 @@ class Entry {
 }
 
 final List<Entry> data = <Entry>[
+
   Entry(
-    'Why should we choose to study in GIC ?',
-    <Entry>[
-      Entry(
-          '''
-        Many reasons students choose to study in GIC:
-        • Lecturers, both Khmer and foreigner, are full of capability and 
-         experience
-        • The department has high connection with public and private partners 
-         as well as local and international companies to provide convenient 
-         process for our students to find internship positions and to get job 
-         after graduation.
-        • Our laboratories have modern computers and servers for our
-         students to do real practice.
-        • The department has many international partner universities to
-         provide training and do research for our students.
-        • Many scholarships positions are available for the students.
-        • The department has laboratories, e-Learnings Center, library and
-         many other equipment for the students to learn and research.
-        '''
-      ),
-    ],
-  ),
-  Entry(
-      'How well students find a job after their graduation?',
+      'How can students know about scholarship information? ',
       <Entry>[
-        Entry("Most of the students get the jobs immediately after graduation. Others start their own companies.")
+        Entry("You can find it on the website of scholarship programs. The department will share the scholarship announcement that we are aware of with student on this website, Facebook group, and students’ mailing list. You can also contact the alumni who has gotten scholarships before.")
       ]
   ),
   Entry(
-      'Does the department provide the training during vocation?',
+      'Are there any exchange programs and scholarships for students? If there exist, what are the requiremnet to apply for scholarships? How many places in average for each year? for which degree? ',
       <Entry>[
-        Entry("Most of the students get the jobs immediately after graduation. Others start their own companies.")
+        Entry("Yes, there are always exchange programs and scholarships given to the students continuously every year. Each scholarship may have different requirements; however, the department usually facilitate the procedure to apply and provide all necessary documents as students need. Many scholarships from both English- and French-speaking countries are given to the students with the average of ten places for Engineering’sDegree and other ten for Master’s Degree. Generally the criteria are based on: • Academic performance • Language proficiency • Motivation • Recommendation from home institute • Social work volunteer experience.")
       ]
   ),
   Entry(
-      'Does the department allow students access to labs during free time?',
+      'What are the countries where students go to study abroad?',
       <Entry>[
-        Entry("Most of the students get the jobs immediately after graduation. Others start their own companies.")
+        Entry("Students can pursue their degrees in some countries of ASIA (Thailand, China, Vietnam, Japan, Indonesia, Malaysia, India, Korea) and Europe (France, Belgium, Canada, Russia) countries.")
       ]
   ),
-  Entry(
-      'What are the expected skills after graduation?',
-      <Entry>[
-        Entry("Most of the students get the jobs immediately after graduation. Others start their own companies.")
-      ]
-  ),
+
 ];
 
 class EntryItem extends StatelessWidget {

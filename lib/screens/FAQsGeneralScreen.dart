@@ -30,22 +30,22 @@ final List<Entry> data = <Entry>[
     'Why should we choose to study in GIC ?',
     <Entry>[
       Entry(
-          '''
-        Many reasons students choose to study in GIC:
-        • Lecturers, both Khmer and foreigner, are full of capability and 
-         experience
-        • The department has high connection with public and private partners 
-         as well as local and international companies to provide convenient 
-         process for our students to find internship positions and to get job 
-         after graduation.
-        • Our laboratories have modern computers and servers for our
-         students to do real practice.
-        • The department has many international partner universities to
-         provide training and do research for our students.
-        • Many scholarships positions are available for the students.
-        • The department has laboratories, e-Learnings Center, library and
-         many other equipment for the students to learn and research.
-        '''
+      '''
+      Many reasons students choose to study in GIC:
+      • Lecturers, both Khmer and foreigner, are full of capability and 
+      experience
+      • The department has high connection with public and private partners 
+      as well as local and international companies to provide convenient 
+      process for our students to find internship positions and to get job 
+      after graduation.
+      • Our laboratories have modern computers and servers for our
+      students to do real practice.
+      • The department has many international partner universities to
+      provide training and do research for our students.
+      • Many scholarships positions are available for the students.
+      • The department has laboratories, e-Learnings Center, library and
+      many other equipment for the students to learn and research.
+      '''
       ),
     ],
   ),
