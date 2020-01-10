@@ -52,7 +52,8 @@ final List<Entry> data = <Entry>[
   Entry(
       'How well students find a job after their graduation?',
       <Entry>[
-        Entry("Most of the students get the jobs immediately after graduation. Others start their own companies.")
+        Entry(""
+            "Most of the students get the jobs immediately after graduation. Others start their own companies.")
       ]
   ),
   Entry(
