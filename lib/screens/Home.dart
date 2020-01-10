@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:gic_website/screens/FAQsScholarshipScreen.dart';
 import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/PartnersScreen.dart';
 import 'aboutGicScreen.dart';
@@ -149,143 +150,158 @@ class _HomeState extends State<Home> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            width: 125,
-                            height: 125,
-                            decoration: boxDecoration,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          "News/Events",
-                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                        Container(
-                                          padding: EdgeInsets.only(top: 5),
-                                          alignment: Alignment.topLeft,
-                                          child: Container(
-                                            width: 50,
-                                            height: 1,
-                                            color: Color(0xffFFCE71),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerScreen()));
+                          },
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              width: 125,
+                              height: 125,
+                              decoration: boxDecoration,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "News/Events",
+                                            style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
                                           ),
-                                        ),
-                                        Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 5),
                                             alignment: Alignment.topLeft,
-                                            width: 100,
-                                            child: Image.asset(
-                                              "assets/images/news.png",
+                                            child: Container(
                                               width: 50,
-                                              height: 50,
-                                            )),
-                                      ],
+                                              height: 1,
+                                              color: Color(0xffFFCE71),
+                                            ),
+                                          ),
+                                          Container(
+                                              padding: EdgeInsets.only(top: 10),
+                                              alignment: Alignment.topLeft,
+                                              width: 100,
+                                              child: Image.asset(
+                                                "assets/images/news.png",
+                                                width: 50,
+                                                height: 50,
+                                              )),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: Container(
-                            width: 125,
-                            height: 125,
-                            decoration: boxDecoration,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          "Scholarships",
-                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                        Container(
-                                          padding: EdgeInsets.only(top: 5),
-                                          alignment: Alignment.topLeft,
-                                          child: Container(
-                                            width: 50,
-                                            height: 1,
-                                            color: Color(0xffE14A4A),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerScreen()));
+                          },
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: 125,
+                              height: 125,
+                              decoration: boxDecoration,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Scholarships",
+                                            style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
                                           ),
-                                        ),
-                                        Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 5),
                                             alignment: Alignment.topLeft,
-                                            width: 100,
-                                            child: Image.asset(
-                                              "assets/images/graduation.png",
+                                            child: Container(
                                               width: 50,
-                                              height: 50,
-                                            )),
-                                      ],
+                                              height: 1,
+                                              color: Color(0xffE14A4A),
+                                            ),
+                                          ),
+                                          Container(
+                                              padding: EdgeInsets.only(top: 10),
+                                              alignment: Alignment.topLeft,
+                                              width: 100,
+                                              child: Image.asset(
+                                                "assets/images/graduation.png",
+                                                width: 50,
+                                                height: 50,
+                                              )),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: Container(
-                            width: 125,
-                            height: 125,
-                            decoration: boxDecoration,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          "Partners",
-                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                        Container(
-                                          padding: EdgeInsets.only(top: 5),
-                                          alignment: Alignment.topLeft,
-                                          child: Container(
-                                            width: 50,
-                                            height: 1,
-                                            color: Color(0xff5C9CEE),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerScreen()));
+                          },
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Container(
+                              width: 125,
+                              height: 125,
+                              decoration: boxDecoration,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Partners",
+                                            style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
                                           ),
-                                        ),
-                                        Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 5),
                                             alignment: Alignment.topLeft,
-                                            width: 100,
-                                            child: Image.asset(
-                                              "assets/images/partners.png",
+                                            child: Container(
                                               width: 50,
-                                              height: 50,
-                                            )),
-                                      ],
+                                              height: 1,
+                                              color: Color(0xff5C9CEE),
+                                            ),
+                                          ),
+                                          Container(
+                                              padding: EdgeInsets.only(top: 10),
+                                              alignment: Alignment.topLeft,
+                                              width: 100,
+                                              child: Image.asset(
+                                                "assets/images/partners.png",
+                                                width: 50,
+                                                height: 50,
+                                              )),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -298,96 +314,106 @@ class _HomeState extends State<Home> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            width: 125,
-                            height: 125,
-                            decoration: boxDecoration,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          "FAQs",
-                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                        Container(
-                                          padding: EdgeInsets.only(top: 5),
-                                          alignment: Alignment.topLeft,
-                                          child: Container(
-                                            width: 50,
-                                            height: 1,
-                                            color: Color(0xffAE85CC),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
+                          },
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              width: 125,
+                              height: 125,
+                              decoration: boxDecoration,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "FAQs",
+                                            style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
                                           ),
-                                        ),
-                                        Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 5),
                                             alignment: Alignment.topLeft,
-                                            width: 100,
-                                            child: Image.asset(
-                                              "assets/images/faq.png",
+                                            child: Container(
                                               width: 50,
-                                              height: 50,
-                                            )),
-                                      ],
+                                              height: 1,
+                                              color: Color(0xffAE85CC),
+                                            ),
+                                          ),
+                                          Container(
+                                              padding: EdgeInsets.only(top: 10),
+                                              alignment: Alignment.topLeft,
+                                              width: 100,
+                                              child: Image.asset(
+                                                "assets/images/faq.png",
+                                                width: 50,
+                                                height: 50,
+                                              )),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: Container(
-                            width: 125,
-                            height: 125,
-                            decoration: boxDecoration,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(left: 15),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          "About GIC",
-                                          style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                        Container(
-                                          padding: EdgeInsets.only(top: 5),
-                                          alignment: Alignment.topLeft,
-                                          child: Container(
-                                            width: 50,
-                                            height: 1,
-                                            color: Color(0xffA65D4E),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AboutGICScreen()));
+                          },
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: 125,
+                              height: 125,
+                              decoration: boxDecoration,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "About GIC",
+                                            style: TextStyle(color: Color(0xff26304D), fontSize: 16, fontWeight: FontWeight.bold),
                                           ),
-                                        ),
-                                        Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 5),
                                             alignment: Alignment.topLeft,
-                                            width: 100,
-                                            child: Image.asset(
-                                              "assets/images/data.png",
+                                            child: Container(
                                               width: 50,
-                                              height: 50,
-                                            )),
-                                      ],
+                                              height: 1,
+                                              color: Color(0xffA65D4E),
+                                            ),
+                                          ),
+                                          Container(
+                                              padding: EdgeInsets.only(top: 10),
+                                              alignment: Alignment.topLeft,
+                                              width: 100,
+                                              child: Image.asset(
+                                                "assets/images/data.png",
+                                                width: 50,
+                                                height: 50,
+                                              )),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
