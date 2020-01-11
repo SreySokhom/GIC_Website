@@ -4,6 +4,7 @@ import 'package:gic_website/screens/FAQsScholarshipScreen.dart';
 import 'package:gic_website/screens/FAQsScreen.dart';
 import 'package:gic_website/screens/PartnersScreen.dart';
 import 'aboutGicScreen.dart';
+import 'package:gic_website/screens/newEvant.dart';
 
 
 final List<String> imgList = [
@@ -152,7 +153,7 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         GestureDetector(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
                           },
                           child: Align(
                             alignment: Alignment.centerLeft,
